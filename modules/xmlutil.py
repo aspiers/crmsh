@@ -22,7 +22,7 @@ import copy
 import bz2
 
 from schema import Schema
-from userprefs import UserPrefs
+from userprefs import Options, UserPrefs
 from vars import Vars, getuser, gethomedir
 from msg import common_err, common_error, common_debug, cib_parse_err, err_buf
 from utils import add_sudo, str2file, str2tmp, pipe_string, get_boolean
@@ -1389,6 +1389,7 @@ def merge_tmpl_into_prim(prim_node, tmpl_node):
 
 
 user_prefs = UserPrefs.getInstance()
+options = Options.getInstance()
 vars = Vars.getInstance()
 schema = Schema.getInstance()
 # vim:ts=4:sw=4:et:
